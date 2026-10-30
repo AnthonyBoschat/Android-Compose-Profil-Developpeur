@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.kotlin_1.ui.theme.Kotlin1Theme
 
@@ -41,7 +42,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Profil(modifier: Modifier = Modifier) {
-    val skills = listOf(
+    val skills: List<String> = listOf(
         "Kotlin et Jetpack Compose",
         "JavaScript, TypeScript et React",
         "Python et Django (Framework)",
@@ -94,8 +95,8 @@ fun ProfilCard(
                 modifier    = Modifier.padding(bottom = sectionSpace)
             )
 
-            SectionTitle(text = "Compétences")
 
+            SectionTitle(text = "Compétences")
             skills.forEach { skill ->
                 Skill(
                     sentence = skill,
@@ -108,6 +109,7 @@ fun ProfilCard(
                 sentence = email,
                 modifier = Modifier.padding(top = sectionSpace)
             )
+
             Information(
                 title    = "Disponibilité",
                 sentence = availability,
@@ -190,7 +192,8 @@ fun Action(
 ) {
     Button(
         onClick  = onClick,
-        modifier = modifier
+        modifier = modifier,
+        shape    = RoundedCornerShape(8.dp)
     ) {
         Text(text = title)
     }
@@ -207,6 +210,20 @@ fun Information(
         Text(
             text  = sentence,
             style = MaterialTheme.typography.bodyMedium
+        )
+    }
+}
+
+
+
+
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ProfilPreview() {
+    Kotlin1Theme {
+        Profil(
+            modifier = Modifier.padding(16.dp)
         )
     }
 }
