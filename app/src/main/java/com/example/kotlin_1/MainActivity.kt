@@ -44,7 +44,7 @@ fun Profil(modifier: Modifier = Modifier) {
     val skills = listOf(
         "Kotlin et Jetpack Compose",
         "JavaScript, TypeScript et React",
-        "Python et Django",
+        "Python et Django (Framework)",
         "Conception de bases de données",
         "Git et DevOps (CICD)"
     )
