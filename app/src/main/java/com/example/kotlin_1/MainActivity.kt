@@ -51,7 +51,7 @@ fun Profil(modifier: Modifier = Modifier) {
 
     ProfilCard(
         name         = "Anthony Boschat",
-        title        = "Concepteur et développeur d'application",
+        title        = "Concepteur & développeur d'application",
         age          = 32,
         description  = "Développeur full-stack passionné par la compréhension des systèmes, les sciences et l’automatisation. Je conçois et développe des solutions adaptées à vos besoins.",
         skills       = skills,
